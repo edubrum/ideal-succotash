@@ -1,0 +1,23 @@
+	algoritmo <cedulas>
+		
+real:qf,c100,c50,c20,c10,c5,c2,resto100,resto50,resto20,resto10,resto5;
+
+inicio
+
+	escreva("insira um valor inteiro(quantia financeira)")
+	leia(qf)
+	c100 = qf/100
+	resto100 = qf mod 100
+	c50 = resto100 / 50
+	resto50 = resto mod 50
+	c20 = resto50 / 20
+	resto20 = resto50 mod 20
+	c10 = resto20 / 10
+	resto10 = resto20 mod 10
+	c5 = resto10 / 5
+	resto5 = resto10 mod 5
+	c2 = resto5 / 2
+
+	escreva("voce precisara de" c100 "cedulas de cem," c50 " cedulas de cinquenta," c20 "cedulas de vinte," c10 "cedulas de dez" c5 "cedulas de cinco e" c2 "cedulas de dois.")
+
+fim

@@ -1,0 +1,345 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language brazilian
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Relatório sobre o utilitário 
+\shape italic
+whereis
+\end_layout
+
+\begin_layout Author
+Eduardo L.
+ Brum (
+\begin_inset CommandInset href
+LatexCommand href
+target "eduardo.longo@acad.pucrs.br"
+type "mailto:"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Abstract
+O
+\shape italic
+ whereis é um comando de busca, ele
+\shape default
+ procura por arquivos executáveis, páginas do manual man, arquivos de configuraç
+ão e códigos fontes.
+\end_layout
+
+\begin_layout Section
+Introdução
+\end_layout
+
+\begin_layout Standard
+Neste breve síntese, foi usado o sistema opperacional Linux Mint 17.2 para
+ a realização da testagem do comando 
+\shape italic
+whereis
+\shape default
+.
+ Será demosntrado e explicado como usar algumas variações do comando em
+ questão.
+ Este trabalho é referente à disciplina de Laboratório de Progração I ministrada
+ por Marco A.
+ S.
+ Mangan, da Pontifícia Universidade Católica do Rio Grande do Sul.
+\end_layout
+
+\begin_layout Section
+O utilitário 
+\shape italic
+whereis
+\end_layout
+
+\begin_layout Standard
+No que se refere a manipulação de arquivos e diretórios(também chamados
+ de 
+\shape italic
+executáveis
+\shape default
+), o whereis localiza o diretório, o seu código fonte e o manual de um comando.Ou
+ seja, a sua aplicação básica( apenas 
+\shape italic
+whereis
+\shape default
+ <comando>) permite a análise detalhada de onde está o comando perguntado
+ e o caminho para chegar onde ele está 
+\begin_inset Quotes eld
+\end_inset
+
+guardado
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Seu formato é, por emeplo:
+\end_layout
+
+\begin_layout Standard
+$whereis 
+\shape italic
+pwd
+\end_layout
+
+\begin_layout Standard
+Retornando, em minha máquina, o seguinte resultado:
+\end_layout
+
+\begin_layout Standard
+pwd: pwd: /bin/pwd /usr/include/pwd.h /usr/share/man/man1/pwd.1.gz 
+\end_layout
+
+\begin_layout Standard
+Segundo a definição de Welsh:
+\begin_inset Quotes erd
+\end_inset
+
+
+\shape italic
+Localiza o arquivo que contém uma página de manual.
+ A pesquisa é feita usando - se os caminhos de páginas de manuais configuradas
+ no sistema (normalmente o arquivo /etc/manpath.config).
+\begin_inset Quotes erd
+\end_inset
+
+[1]
+\end_layout
+
+\begin_layout Standard
+A seguir serão listadas algumas de suas variações com suas respectivas funções:
+ (todos foram retirados do Terminal do Linux e traduzidos para uma melhor
+ compreensão)
+\end_layout
+
+\begin_layout Standard
+$whereis -a <arquivo> : procura apenas por códigos binários;
+\end_layout
+
+\begin_layout Standard
+$whereis -m <arquivo> : procura apenas por seções do manual;
+\end_layout
+
+\begin_layout Standard
+$whereis -s <arquivo> : procura apenas por códigos fontes;
+\end_layout
+
+\begin_layout Standard
+$whereis -u <arquivo> : procura entradas incomuns.
+ Um arquivo é dito ser incomum se ele não tem uma entrada de cada tipo solicitad
+o.
+ Assim 
+\begin_inset Quotes eld
+\end_inset
+
+whereis -m -u
+\begin_inset Quotes erd
+\end_inset
+
+, por emplo, procura pelosarquivos no diretório atual que não têm documentação.
+\end_layout
+
+\begin_layout Standard
+$whereis -B <arquivo> : altera ou limita os locais onde 
+\shape italic
+whereis
+\shape default
+ pesquisa por binários;
+\end_layout
+
+\begin_layout Standard
+$whereis M <arquivo> : altera ou limita os locais onde 
+\shape italic
+whereis
+\shape default
+ busca por seções;
+\end_layout
+
+\begin_layout Standard
+$whereis -S <arquivo> : altera ou limita os lugares onde whereis procura
+ pelas fontes;
+\end_layout
+
+\begin_layout Standard
+$whereis -f <arquivo> : so pode ser usado se os comandos whereis forem terminado
+s em 
+\begin_inset Quotes eld
+\end_inset
+
+ -B
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+ -M
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+ -S
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Sua função eh finalizar a lista do último diretório e sinalizar o início
+ do nome ods arquivos;
+\end_layout
+
+\begin_layout Section
+Metodologia
+\end_layout
+
+\begin_layout Standard
+Foi consultado o link disponibilizado no moodle,a busca do Google e o Terminal
+ da máquina onde foi feita a pesquisa.
+ A consulta foi: 
+\begin_inset Quotes eld
+\end_inset
+
+comandos unix
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+comando whreis linux
+\begin_inset Quotes erd
+\end_inset
+
+ e 
+\begin_inset Quotes eld
+\end_inset
+
+documentação Ubuntu
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
+Conclusão
+\end_layout
+
+\begin_layout Standard
+Sendo assim, pode-se utilizar o comando referido mais com uma finalidade
+ de examinar detalhadamente arquivos e diretórios de modo a entender onde
+ estão e sua estrutura.
+ Uma vez que o comando 
+\shape italic
+which
+\shape default
+ não informa uma variedade tão grande de infromações, é usado o 
+\shape italic
+whereis
+\shape default
+ e suas variações.
+\end_layout
+
+\begin_layout Section*
+Referências
+\end_layout
+
+\begin_layout Standard
+[1]WELSH, Matt et al.
+ Linux: Instalação e Iniciação.
+ http://www.inf.pucrs.br/~benso/gerencia_redes/2005/manuais/Linux%20Introducao.pdf
+\end_layout
+
+\begin_layout Standard
+[2]https://www.vivaolinux.com.br/dica/Os-comandos-which-e-whereis
+\end_layout
+
+\begin_layout Standard
+[3]http://www.danbp.org/linuxcom.html
+\end_layout
+
+\begin_layout Standard
+[4] terminal do linux: 
+\shape italic
+man whereis
+\end_layout
+
+\end_body
+\end_document

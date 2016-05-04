@@ -1,0 +1,17 @@
+	algoritmo <maior_numero>
+
+real:n1,n2,n3,maior1,maior2;
+inicio
+
+	escreva("digite um numero")
+	leia (n1)
+	escreva("digite outro numero")
+	leia(n2)
+	escreva("digite o ultimo numero")
+	leia(n3)
+	maior1 = (n1 + n2 + abs(n1-n2))/2
+	maior2 = (maior1 + n3 + abs(maior1-n3))/2
+	escreva(maior2)
+
+fim
+	

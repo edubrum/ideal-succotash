@@ -1,0 +1,13 @@
+	algoritmo <comissao>
+
+real: nvendas, vvendas, imposto, comissao;
+inicio
+
+	
+	escreva("digite o numero de vendas realizadas e o valor arrecadado")
+	leia(nvendas, vvendas)
+	comissao = vvendas * 0.05
+	imposto = nvendas *0.05 * 0.18
+	escreva("a comissao deste vendedor sera de" comissao " e o custo dos impostos serao de " imposto)
+
+fim

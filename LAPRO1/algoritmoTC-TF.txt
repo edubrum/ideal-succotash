@@ -1,0 +1,11 @@
+	algoritmo <celsius_ferenheit>
+
+real : tc, tc;
+inicio
+	
+	escreva("insira a temperatura em celsius")
+	leia(tc)
+	tf = (9/5)*tc+32
+	escreva(tf)
+
+fim

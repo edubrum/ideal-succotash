@@ -1,0 +1,12 @@
+     algoritmo < dias_anosTrabalho>
+    real: diast,anos,meses,dias,restoA,
+inicio:
+   escreva("digite o numero de dias totais: ")
+   leia(diast)
+   anos= diast/365
+   restoA = diast mod 365
+   meses = restoA /30
+   dias = restoA mod 30
+   escreva("insira o numero de dias"/"insira o numero de meses"/"insira o numero de anos")
+
+   fim

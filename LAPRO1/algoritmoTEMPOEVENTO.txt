@@ -1,0 +1,16 @@
+	algoritmo <tempo_evento>
+
+real: tseg, th, rh, tmin, rmin, ts, rs;
+inicio
+
+	escreva("insira o tempo em segundos")
+	leia(tseg)
+	th = tseg / 3600
+	rh = tseg mod 3600
+	tmin = rh / 60
+	rmin = rh mod 60
+	ts = rmin / 60
+	rs = rmin mod 60
+	escreva (th":"tmin":"rs)
+fim
+	
